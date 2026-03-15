@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuestros momentos</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg,#0f0f0f,#1b1b1b);
+    color:white;
+    text-align:center;
+}
+
+header{
+    padding:60px 20px 30px;
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.frase{
+    color:#cccccc;
+    font-size:18px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.galeria img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.galeria img:hover{
+    transform:scale(1.08);
+}
+
+footer{
+    padding:40px;
+    color:#aaaaaa;
+    font-size:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Nuestros momentos ❤️</h1>
+
+<p class="frase">
+Algunos de mis recuerdos favoritos contigo.
+</p>
+
+</header>
+
+<section class="galeria">
+
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto4.jpeg">
+<img src="foto5.jpeg">
+<img src="foto6.jpeg">
+
+</section>
+
+<footer>
+
+Gracias por cada momento a tu lado.
+
+</footer>
+
+</body>
+</html>
