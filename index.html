@@ -5,49 +5,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Momentos contigo</title>
+<title>Nuestros recuerdos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family: 'Segoe UI', sans-serif;
 background: radial-gradient(circle at top,#111,#000);
+font-family:'Quicksand',sans-serif;
 color:white;
-text-align:center;
 overflow-x:hidden;
 }
 
-/* TITULO */
+/* CONTENEDOR PRINCIPAL */
 
-header{
-padding:60px 20px 20px;
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:40px;
+flex-wrap:wrap;
 }
 
-h1{
-font-size:40px;
-margin-bottom:10px;
+/* TEXTO LADO IZQUIERDO */
+
+.texto{
+max-width:260px;
 }
 
-.frase{
+.texto h1{
+font-family:'Playfair Display',serif;
+font-size:38px;
+margin-bottom:20px;
+}
+
+.texto p{
 color:#bbbbbb;
-font-size:18px;
+line-height:1.6;
 }
 
-/* GALERIA */
+/* COLLAGE */
 
 .galeria{
 position:relative;
-max-width:1000px;
-margin:60px auto;
-height:900px;
+width:600px;
+height:800px;
 }
 
 .galeria img{
 position:absolute;
-width:210px;
+width:180px;
 border-radius:15px;
-box-shadow:0 15px 30px rgba(0,0,0,0.6);
+box-shadow:0 15px 30px rgba(0,0,0,0.7);
 transition:0.4s;
 }
 
@@ -56,38 +68,58 @@ transform:scale(1.1);
 z-index:10;
 }
 
-/* POSICIONES */
+/* POSICIONES DE FOTOS */
 
-.img1{top:20px; left:80px; transform:rotate(-8deg);}
-.img2{top:60px; right:120px; transform:rotate(6deg);}
-.img3{top:200px; left:250px; transform:rotate(5deg);}
-.img4{top:300px; right:200px; transform:rotate(-6deg);}
-.img5{top:400px; left:60px; transform:rotate(7deg);}
-.img6{top:500px; right:60px; transform:rotate(-5deg);}
-.img7{top:600px; left:220px; transform:rotate(4deg);}
-.img8{top:720px; right:260px; transform:rotate(-7deg);}
-.img9{top:150px; right:360px; transform:rotate(8deg);}
-.img10{top:450px; left:350px; transform:rotate(-4deg);}
-.img11{top:650px; right:100px; transform:rotate(5deg);}
-.img12{top:750px; left:450px; transform:rotate(-6deg);}
+.img1{top:0px; left:100px; transform:rotate(-8deg);}
+.img2{top:50px; right:80px; transform:rotate(6deg);}
+.img3{top:180px; left:0px; transform:rotate(5deg);}
+.img4{top:220px; right:120px; transform:rotate(-6deg);}
+.img5{top:340px; left:140px; transform:rotate(7deg);}
+.img6{top:420px; right:40px; transform:rotate(-5deg);}
+.img7{top:500px; left:40px; transform:rotate(4deg);}
+.img8{top:600px; right:160px; transform:rotate(-7deg);}
+.img9{top:680px; left:200px; transform:rotate(6deg);}
+.img10{top:120px; left:250px; transform:rotate(-5deg);}
+.img11{top:450px; left:260px; transform:rotate(4deg);}
+.img12{top:300px; right:240px; transform:rotate(-6deg);}
+.img13{top:550px; right:260px; transform:rotate(5deg);}
+.img14{top:720px; right:20px; transform:rotate(-5deg);}
 
-/* FOOTER */
+/* TEXTO DERECHO */
 
-footer{
-margin-top:80px;
-padding:40px;
-color:#aaa;
+.mensaje{
+max-width:260px;
 }
 
+.mensaje h2{
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.mensaje p{
+color:#bbbbbb;
+}
+
+/* CORAZON ANIMADO */
+
 .corazon{
-font-size:22px;
+font-size:28px;
+margin-top:20px;
 animation:latido 1.5s infinite;
 }
 
 @keyframes latido{
 0%{transform:scale(1);}
-50%{transform:scale(1.2);}
+50%{transform:scale(1.25);}
 100%{transform:scale(1);}
+}
+
+/* ROSA HECHA CON CSS */
+
+.rosa{
+font-size:30px;
+margin-top:10px;
 }
 
 </style>
@@ -96,15 +128,20 @@ animation:latido 1.5s infinite;
 
 <body>
 
-<header>
+<div class="container">
+
+<div class="texto">
 
 <h1>Nuestros recuerdos</h1>
 
-<p class="frase">
-Pequeños momentos que significan mucho para mí.
+<p>
+Pequeños momentos que para el mundo pueden parecer simples,
+pero para mí significan muchísimo.
 </p>
 
-</header>
+<div class="rosa">🌹</div>
+
+</div>
 
 
 <section class="galeria">
@@ -121,19 +158,25 @@ Pequeños momentos que significan mucho para mí.
 <img src="foto10.jpeg" class="img10">
 <img src="foto11.jpeg" class="img11">
 <img src="foto12.jpeg" class="img12">
+<img src="foto13.jpeg" class="img13">
+<img src="foto14.jpeg" class="img14">
 
 </section>
 
 
-<footer>
+<div class="mensaje">
+
+<h2>Para ti</h2>
 
 <p>
-Gracias por cada momento que hemos vivido juntos.
+Gracias por cada momento, cada sonrisa y cada recuerdo que hemos creado juntos.
 </p>
 
 <div class="corazon">❤️</div>
 
-</footer>
+</div>
+
+</div>
 
 </body>
 </html>
