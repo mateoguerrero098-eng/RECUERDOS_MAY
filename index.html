@@ -13,13 +13,30 @@
 
 body{
 margin:0;
-background: radial-gradient(circle at top,#111,#000);
+background:#000;
 font-family:'Quicksand',sans-serif;
 color:white;
 overflow-x:hidden;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* FONDO DE ESTRELLAS */
+
+.estrellas{
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://www.transparenttextures.com/patterns/stardust.png');
+opacity:0.25;
+z-index:-1;
+animation:moverEstrellas 60s linear infinite;
+}
+
+@keyframes moverEstrellas{
+from{background-position:0 0;}
+to{background-position:1000px 1000px;}
+}
+
+/* CONTENEDOR */
 
 .container{
 display:flex;
@@ -30,7 +47,7 @@ padding:40px;
 flex-wrap:wrap;
 }
 
-/* TEXTO LADO IZQUIERDO */
+/* TEXTO */
 
 .texto{
 max-width:260px;
@@ -47,45 +64,35 @@ color:#bbbbbb;
 line-height:1.6;
 }
 
-/* COLLAGE */
+/* GALERIA */
 
 .galeria{
-position:relative;
-width:600px;
-height:800px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+gap:25px;
+max-width:700px;
 }
 
 .galeria img{
-position:absolute;
-width:180px;
+width:100%;
 border-radius:15px;
 box-shadow:0 15px 30px rgba(0,0,0,0.7);
-transition:0.4s;
+transition:0.35s;
+}
+
+.galeria img:nth-child(odd){
+transform:rotate(-4deg);
+}
+
+.galeria img:nth-child(even){
+transform:rotate(4deg);
 }
 
 .galeria img:hover{
-transform:scale(1.1);
-z-index:10;
+transform:scale(1.08) rotate(0deg);
 }
 
-/* POSICIONES DE FOTOS */
-
-.img1{top:0px; left:100px; transform:rotate(-8deg);}
-.img2{top:50px; right:80px; transform:rotate(6deg);}
-.img3{top:180px; left:0px; transform:rotate(5deg);}
-.img4{top:220px; right:120px; transform:rotate(-6deg);}
-.img5{top:340px; left:140px; transform:rotate(7deg);}
-.img6{top:420px; right:40px; transform:rotate(-5deg);}
-.img7{top:500px; left:40px; transform:rotate(4deg);}
-.img8{top:600px; right:160px; transform:rotate(-7deg);}
-.img9{top:680px; left:200px; transform:rotate(6deg);}
-.img10{top:120px; left:250px; transform:rotate(-5deg);}
-.img11{top:450px; left:260px; transform:rotate(4deg);}
-.img12{top:300px; right:240px; transform:rotate(-6deg);}
-.img13{top:550px; right:260px; transform:rotate(5deg);}
-.img14{top:720px; right:20px; transform:rotate(-5deg);}
-
-/* TEXTO DERECHO */
+/* MENSAJE */
 
 .mensaje{
 max-width:260px;
@@ -94,14 +101,13 @@ max-width:260px;
 .mensaje h2{
 font-family:'Playfair Display',serif;
 font-size:28px;
-margin-bottom:15px;
 }
 
 .mensaje p{
 color:#bbbbbb;
 }
 
-/* CORAZON ANIMADO */
+/* CORAZON */
 
 .corazon{
 font-size:28px;
@@ -111,15 +117,43 @@ animation:latido 1.5s infinite;
 
 @keyframes latido{
 0%{transform:scale(1);}
-50%{transform:scale(1.25);}
+50%{transform:scale(1.3);}
 100%{transform:scale(1);}
 }
 
-/* ROSA HECHA CON CSS */
+/* CORAZONES FLOTANDO */
 
-.rosa{
-font-size:30px;
-margin-top:10px;
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:20px;
+color:#ff4d6d;
+animation:flotar 10s linear infinite;
+opacity:0.7;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+
+/* BOTON MENSAJE */
+
+.boton{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+}
+
+.secreto{
+display:none;
+margin-top:15px;
+color:#ddd;
+font-style:italic;
 }
 
 </style>
@@ -128,6 +162,8 @@ margin-top:10px;
 
 <body>
 
+<div class="estrellas"></div>
+
 <div class="container">
 
 <div class="texto">
@@ -135,31 +171,31 @@ margin-top:10px;
 <h1>Nuestros recuerdos</h1>
 
 <p>
-Pequeños momentos que para el mundo pueden parecer simples,
+Pequeños momentos que pueden parecer simples,
 pero para mí significan muchísimo.
 </p>
 
-<div class="rosa">🌹</div>
+<div style="font-size:28px">🌹</div>
 
 </div>
 
 
 <section class="galeria">
 
-<img src="foto1.jpg" class="img1">
-<img src="foto2.jpeg" class="img2">
-<img src="foto3.jpeg" class="img3">
-<img src="foto4.jpeg" class="img4">
-<img src="foto5.jpeg" class="img5">
-<img src="foto6.jpeg" class="img6">
-<img src="foto7.jpeg" class="img7">
-<img src="foto8.jpeg" class="img8">
-<img src="foto9.jpeg" class="img9">
-<img src="foto10.jpeg" class="img10">
-<img src="foto11.jpeg" class="img11">
-<img src="foto12.jpeg" class="img12">
-<img src="foto13.jpeg" class="img13">
-<img src="foto14.jpeg" class="img14">
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+<img src="foto5.jpg">
+<img src="foto6.jpg">
+<img src="foto7.jpg">
+<img src="foto8.jpg">
+<img src="foto9.jpg">
+<img src="foto10.jpg">
+<img src="foto11.jpg">
+<img src="foto12.jpg">
+<img src="foto13.jpg">
+<img src="foto14.jpg">
 
 </section>
 
@@ -169,14 +205,46 @@ pero para mí significan muchísimo.
 <h2>Para ti</h2>
 
 <p>
-Gracias por cada momento, cada sonrisa y cada recuerdo que hemos creado juntos.
+Gracias por cada momento que hemos vivido juntos.
 </p>
 
 <div class="corazon">❤️</div>
 
+<button class="boton" onclick="mostrarMensaje()">Haz clic aquí</button>
+
+<p class="secreto" id="mensajeSecreto">
+Si estás viendo esto, es porque encontraste uno de mis lugares favoritos:
+los recuerdos que tengo contigo.
+</p>
+
 </div>
 
 </div>
+
+<script>
+
+function mostrarMensaje(){
+document.getElementById("mensajeSecreto").style.display="block";
+}
+
+/* CREAR CORAZONES */
+
+function crearCorazon(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+}
+
+setInterval(crearCorazon,1200);
+
+</script>
 
 </body>
 </html>
