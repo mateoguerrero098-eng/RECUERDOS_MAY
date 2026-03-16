@@ -5,81 +5,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Algunos de mis momentos favoritos contigo</title>
+<title>Momentos contigo</title>
 
 <style>
 
 body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top,#111,#000);
-    color:white;
-    text-align:center;
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: radial-gradient(circle at top,#111,#000);
+color:white;
+text-align:center;
+overflow-x:hidden;
 }
 
 /* TITULO */
 
 header{
-    padding:60px 20px 20px;
+padding:60px 20px 20px;
 }
 
 h1{
-    font-size:38px;
-    margin-bottom:10px;
+font-size:40px;
+margin-bottom:10px;
 }
 
 .frase{
-    color:#bbbbbb;
-    font-size:18px;
+color:#bbbbbb;
+font-size:18px;
 }
 
-/* COLLAGE */
+/* GALERIA */
 
 .galeria{
-    position:relative;
-    max-width:900px;
-    margin:60px auto;
-    height:600px;
+position:relative;
+max-width:1000px;
+margin:60px auto;
+height:900px;
 }
 
 .galeria img{
-    position:absolute;
-    width:220px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.6);
-    transition:0.4s;
+position:absolute;
+width:210px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
+transition:0.4s;
 }
 
 .galeria img:hover{
-    transform:scale(1.1);
+transform:scale(1.1);
+z-index:10;
 }
 
-/* POSICIONES DESORDENADAS */
+/* POSICIONES */
 
-.img1{ top:20px; left:60px; transform:rotate(-8deg);}
-.img2{ top:120px; left:300px; transform:rotate(6deg);}
-.img3{ top:280px; left:80px; transform:rotate(4deg);}
-.img4{ top:50px; right:80px; transform:rotate(-5deg);}
-.img5{ bottom:40px; right:220px; transform:rotate(7deg);}
-.img6{ bottom:20px; left:320px; transform:rotate(-6deg);}
+.img1{top:20px; left:80px; transform:rotate(-8deg);}
+.img2{top:60px; right:120px; transform:rotate(6deg);}
+.img3{top:200px; left:250px; transform:rotate(5deg);}
+.img4{top:300px; right:200px; transform:rotate(-6deg);}
+.img5{top:400px; left:60px; transform:rotate(7deg);}
+.img6{top:500px; right:60px; transform:rotate(-5deg);}
+.img7{top:600px; left:220px; transform:rotate(4deg);}
+.img8{top:720px; right:260px; transform:rotate(-7deg);}
+.img9{top:150px; right:360px; transform:rotate(8deg);}
+.img10{top:450px; left:350px; transform:rotate(-4deg);}
+.img11{top:650px; right:100px; transform:rotate(5deg);}
+.img12{top:750px; left:450px; transform:rotate(-6deg);}
 
-/* MENSAJE FINAL */
+/* FOOTER */
 
 footer{
-    margin-top:40px;
-    padding:40px;
-    color:#aaa;
+margin-top:80px;
+padding:40px;
+color:#aaa;
 }
 
 .corazon{
-    font-size:22px;
-    animation:latido 1.5s infinite;
+font-size:22px;
+animation:latido 1.5s infinite;
 }
 
 @keyframes latido{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.2);}
-    100%{transform:scale(1);}
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
 }
 
 </style>
@@ -90,10 +98,10 @@ footer{
 
 <header>
 
-<h1>Algunos de mis momentos favoritos contigo</h1>
+<h1>Nuestros recuerdos</h1>
 
 <p class="frase">
-Cada foto guarda un recuerdo que no cambiaría por nada.
+Pequeños momentos que significan mucho para mí.
 </p>
 
 </header>
@@ -101,12 +109,18 @@ Cada foto guarda un recuerdo que no cambiaría por nada.
 
 <section class="galeria">
 
-<img src="foto1.jpeg" class="img1">
-<img src="foto2.jpeg" class="img2">
-<img src="foto3.jpeg" class="img3">
-<img src="foto4.jpeg" class="img4">
-<img src="foto5.jpeg" class="img5">
-<img src="foto6.jpeg" class="img6">
+<img src="foto1.jpg" class="img1">
+<img src="foto2.jpg" class="img2">
+<img src="foto3.jpg" class="img3">
+<img src="foto4.jpg" class="img4">
+<img src="foto5.jpg" class="img5">
+<img src="foto6.jpg" class="img6">
+<img src="foto7.jpg" class="img7">
+<img src="foto8.jpg" class="img8">
+<img src="foto9.jpg" class="img9">
+<img src="foto10.jpg" class="img10">
+<img src="foto11.jpg" class="img11">
+<img src="foto12.jpg" class="img12">
 
 </section>
 
@@ -114,7 +128,7 @@ Cada foto guarda un recuerdo que no cambiaría por nada.
 <footer>
 
 <p>
-Gracias por cada momento a tu lado.
+Gracias por cada momento que hemos vivido juntos.
 </p>
 
 <div class="corazon">❤️</div>
