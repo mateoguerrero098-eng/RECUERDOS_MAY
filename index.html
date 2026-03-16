@@ -1,90 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nuestros momentos</title>
+<title>Algunos de mis momentos favoritos contigo</title>
 
 <style>
 
 body{
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg,#0f0f0f,#1b1b1b);
+    background: radial-gradient(circle at top,#111,#000);
     color:white;
     text-align:center;
 }
 
+/* TITULO */
+
 header{
-    padding:60px 20px 30px;
+    padding:60px 20px 20px;
 }
 
 h1{
-    font-size:40px;
+    font-size:38px;
     margin-bottom:10px;
 }
 
 .frase{
-    color:#cccccc;
+    color:#bbbbbb;
     font-size:18px;
 }
 
+/* COLLAGE */
+
 .galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    padding:40px;
+    position:relative;
     max-width:900px;
-    margin:auto;
+    margin:60px auto;
+    height:600px;
 }
 
 .galeria img{
-    width:100%;
+    position:absolute;
+    width:220px;
     border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
     transition:0.4s;
-    cursor:pointer;
 }
 
 .galeria img:hover{
-    transform:scale(1.08);
+    transform:scale(1.1);
 }
 
+/* POSICIONES DESORDENADAS */
+
+.img1{ top:20px; left:60px; transform:rotate(-8deg);}
+.img2{ top:120px; left:300px; transform:rotate(6deg);}
+.img3{ top:280px; left:80px; transform:rotate(4deg);}
+.img4{ top:50px; right:80px; transform:rotate(-5deg);}
+.img5{ bottom:40px; right:220px; transform:rotate(7deg);}
+.img6{ bottom:20px; left:320px; transform:rotate(-6deg);}
+
+/* MENSAJE FINAL */
+
 footer{
+    margin-top:40px;
     padding:40px;
-    color:#aaaaaa;
-    font-size:15px;
+    color:#aaa;
+}
+
+.corazon{
+    font-size:22px;
+    animation:latido 1.5s infinite;
+}
+
+@keyframes latido{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<h1>Nuestros momentos ❤️</h1>
+<h1>Algunos de mis momentos favoritos contigo</h1>
 
 <p class="frase">
-Algunos de mis recuerdos favoritos contigo.
+Cada foto guarda un recuerdo que no cambiaría por nada.
 </p>
 
 </header>
 
+
 <section class="galeria">
 
-<img src="foto1.jpeg">
-<img src="foto2.jpeg">
-<img src="foto3.jpeg">
-<img src="foto4.jpeg">
-<img src="foto5.jpeg">
-<img src="foto6.jpeg">
+<img src="foto1.jpeg" class="img1">
+<img src="foto2.jpeg" class="img2">
+<img src="foto3.jpeg" class="img3">
+<img src="foto4.jpeg" class="img4">
+<img src="foto5.jpeg" class="img5">
+<img src="foto6.jpeg" class="img6">
 
 </section>
 
+
 <footer>
 
+<p>
 Gracias por cada momento a tu lado.
+</p>
+
+<div class="corazon">❤️</div>
 
 </footer>
 
